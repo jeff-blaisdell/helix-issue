@@ -23,12 +23,10 @@ allprojects {
 
 // For the modules being built by Gradle.
 subprojects {
-    val smartThingsUserName: String by project
-    val smartThingsPassword: String by project
 
     apply(plugin = "groovy")
 
-    group = "smartthings"
+    group = "helix"
     repositories {
         mavenLocal()
         mavenCentral()
