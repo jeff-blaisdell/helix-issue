@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: controller
+  resources:
+    add-mappings: false
+
+management:
+  endpoints:
+    web:
+      base-path: /
+      exposure:
+        include: "buildinfo, health, info, *   "
+
+server:
+  port: 8080
+
+controller:
+    zkSvr: localhost:2181
+    cluster: "default-cluster"
+    mode: "STANDALONE"
+    name: "default-resource"
+

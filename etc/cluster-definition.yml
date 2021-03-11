@@ -1,0 +1,11 @@
+# See https://helix.apache.org/1.0.1-docs/tutorial_yaml.html
+clusterName: default-cluster
+resources:
+  - name: default-resource
+    rebalancer:
+      mode: FULL_AUTO
+    partitions:
+      count: 3
+      replicas: 1
+    stateModel:
+      name: OnlineOffline
