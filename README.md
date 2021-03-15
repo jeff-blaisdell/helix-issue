@@ -1,5 +1,7 @@
 # Helix Issue
 
+https://github.com/apache/helix/issues/1670
+
 ### Setup
 * Helix 1.0.1
 * Java 8+
@@ -101,3 +103,11 @@ ExternalView for default-resource:
 1. Review helix cluster state `./etc/view-helix.sh`
 1. Connect to Helix Controller JMX and view `ClusterStatus -> default-cluster -> default-resource`
 
+### Solution
+Setting a seemingly undocumented option can "fix" the issue of ideal state being persisted.  Once the ideal state
+is persisted, the `DifferenceWithIdealStateGauge` metric will be correct.  The following command can be issued 
+against Helix to enable the option:
+
+```
+helix-admin.sh --zkSvr localhost:2181 --setConfig CLUSTER default-cluster PERSIST_BEST_POSSIBLE_ASSIGNMENT=true
+```

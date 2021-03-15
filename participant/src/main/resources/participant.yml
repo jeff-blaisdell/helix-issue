@@ -18,5 +18,5 @@ participant:
     zkSvr: localhost:2181
     cluster: "default-cluster"
     resourceName: "default-resource"
-    instanceName: "localhost_2181"
+    instanceName: "localhost_8081"
 

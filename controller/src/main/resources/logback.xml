@@ -6,7 +6,7 @@
     </appender>
 
     <logger name="org.springframework" level="INFO"/>
-    <logger name="org.apache.helix" level="TRACE"/>
+    <logger name="org.apache.helix" level="INFO"/>
 
     <root level="INFO">
         <appender-ref ref="STDOUT"/>
